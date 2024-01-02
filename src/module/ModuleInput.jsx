@@ -20,14 +20,13 @@ const ModuleInput = ({ setLoading, setData, setUserData }) => {
       const userData = XLSX.utils.sheet_to_json(user, { header: 'A' })
       setUserData(userData)
       setData(data)
-      console.log(data)
-      console.log(userData)
     }
 
     setLoading(false)
   }
   return (
-    <div><h1>Estados de cuenta</h1>
+    <div className='grid min-h-screen place-items-center'>
+      <h1 className='text-2xl font-bold text-center'>Estados de cuenta</h1>
       <div>
         <label className='font-bold mr-2 text-2xl'>Archivo:</label>
         <input
