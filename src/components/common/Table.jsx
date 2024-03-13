@@ -41,6 +41,8 @@ const Table = ({ data }) => {
             </td>
             <td className='px-6 py-4'>
               {d.D === 'DISPERSION' ? `${d.K}` : ''}
+              {d.D.indexOf('Abono') > -1 ? `${d.K}` : ''}
+              {d.D.indexOf('Abono') > -1 ? console.log('abono') : console.log('')}
             </td>
             <td className='px-6 py-4'>
               {d.D !== 'DISPERSION' ? `${d.K}` : ''}

@@ -56,10 +56,12 @@ const DocPdf = ({ userData, data }) => {
                 <Text style={{ padding: '2px', fontSize: '10px', width: '50px' }}>
                   {/* Abono */}
                   {d.D === 'DISPERSION' ? `${d.K}` : ''}
+                  {d.D.indexOf('Abono') > -1 ? `${d.K}` : ''}
                 </Text>
                 <Text style={{ padding: '2px', fontSize: '10px', width: '50px' }}>
                   {/* Cargo */}
-                  {d.D !== 'DISPERSION' ? `${d.K}` : ''}
+                  {/* {d.D !== 'DISPERSION' ? `${d.K}` : ''} */}
+                  {d.B.indexOf('Abono') > -1 ? '' : `${d.K}`}
                 </Text>
                 <Text style={{ padding: '2px', fontSize: '10px', width: '70px' }}>
                   {/* Status */}
